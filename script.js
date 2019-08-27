@@ -101,5 +101,8 @@ var canBeNull = 12;
 canBeNull = null;
 var canAlsoBeNull;
 canAlsoBeNull = null;
+// explicitly setting variables to null will allow changes to any other data type
+// even with strictNullChecks option set to true in the config
 var canThisBeAny = null;
 canThisBeAny = 12;
+canThisBeAny = 'word';
