@@ -32,7 +32,7 @@ enum Color {
 };
 
 let myColor: Color = Color.Green;
-console.log('myColor', myColor);
+console.log('myColor545', myColor);
 
 // any
 let car: any = "BMW";
@@ -126,3 +126,16 @@ let canThisBeAny = null;
 canThisBeAny = 12;
 canThisBeAny = 'word';
 
+// * ES6 & TypeScript
+
+// Default Parameters
+const countdown = (start: number): void => {
+  console.log("Done!", start);
+};
+countdown(3);
+
+// rest operator
+function makeArray(...args: number[]) {
+  return args;
+}
+console.log('make array', makeArray(1, 3, 5));

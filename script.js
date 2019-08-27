@@ -1,4 +1,3 @@
-"use strict";
 // string
 var myName = 'Sean';
 // myName = 8;
@@ -28,7 +27,7 @@ var Color;
 })(Color || (Color = {}));
 ;
 var myColor = Color.Green;
-console.log('myColor', myColor);
+console.log('myColor545', myColor);
 // any
 var car = "BMW";
 console.log(car);
@@ -106,3 +105,18 @@ canAlsoBeNull = null;
 var canThisBeAny = null;
 canThisBeAny = 12;
 canThisBeAny = 'word';
+// * ES6 & TypeScript
+// Default Parameters
+var countdown = function (start) {
+    console.log("Done!", start);
+};
+countdown(3);
+// rest operator
+function makeArray() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    return args;
+}
+console.log('make array', makeArray(1, 3, 4));
