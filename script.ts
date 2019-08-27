@@ -82,10 +82,47 @@ userData = {
   age: 22
 };
 
+// type alias
+// storing a reusable type as a variable
+type Complex = { data: number[], output: (all: boolean) => number[] };
+
+
 // complex object
-let complex: { data: number[], output: (all: boolean) => number[] } = {
+let complex: Complex = {
   data: [100, 3.99, 10],
   output: function (all: boolean): number[] {
     return this.data;
   }
 };
+
+let complex2: Complex = {
+  data: [100, 49, 10],
+  output: function (all = true) {
+    return [22, 54];
+  }
+};
+
+// union types
+// join types if you don't want to use 'any' but you want to allow more than 1 type
+let realAge: number | string = '29';
+realAge = 29;
+// realAge = true;
+
+// never type
+// similar to void, for if you want to be more explicit about your intention
+// if you never want a function to return, appropriate for code you don't want to be reached
+function neverReturns(): never {
+  throw new Error('an error!');
+}
+
+// nullable types
+let canBeNull: number | null = 12;
+canBeNull = null;
+let canAlsoBeNull;
+canAlsoBeNull = null;
+// explicitly setting variables to null will allow changes to any other data type
+// even with strictNullChecks option set to true in the config
+let canThisBeAny = null;
+canThisBeAny = 12;
+canThisBeAny = 'word';
+

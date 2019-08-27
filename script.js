@@ -71,3 +71,35 @@ userData = {
     name: "Hello",
     age: 22
 };
+// complex object
+var complex = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+var complex2 = {
+    data: [100, 49, 10],
+    output: function (all) {
+        if (all === void 0) { all = true; }
+        return [22, 54];
+    }
+};
+// union types
+// join types if you don't want to use 'any' but you want to allow more than 1 type
+var realAge = '29';
+realAge = 29;
+// realAge = true;
+// never type
+// similar to void, for if you want to be more explicit about your intention
+// if you never want a function to return, appropriate for code you don't want to be reached
+function neverReturns() {
+    throw new Error('an error!');
+}
+// nullable types
+var canBeNull = 12;
+canBeNull = null;
+var canAlsoBeNull;
+canAlsoBeNull = null;
+var canThisBeAny = null;
+canThisBeAny = 12;
