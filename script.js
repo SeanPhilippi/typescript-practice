@@ -44,7 +44,7 @@ console.log(returnMyName());
 // throw error if function returns anything
 function sayHello() {
     console.log("Hello!");
-    return myName;
+    // return myName;
 }
 // argument types
 function multiply(val1, val2) {
@@ -53,8 +53,21 @@ function multiply(val1, val2) {
 // console.log(multiply(2, 'Max'));
 console.log(multiply(10, 2));
 // function types
+// argument and parameter names matching doesn't matter but the order of the arguments does.  the 1st argument
+// must be a number, as well as the second
 var myMultiply;
-myMultiply = sayHello;
-console.log(myMultiply());
+// myMultiply = sayHello;
+// console.log(myMultiply())
 myMultiply = multiply;
 console.log(myMultiply(3, 3));
+// objects
+// TypeScript cares about the names of properties in objects, as well as types assigned to those props
+// the reason for this is that Objects are accessed by specific key names, the order doesn't matter.
+var userData = {
+    name: "Sean",
+    age: 29
+};
+userData = {
+    name: "Hello",
+    age: 22
+};
